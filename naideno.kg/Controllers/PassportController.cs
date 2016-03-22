@@ -15,6 +15,7 @@ namespace naideno.kg.Controllers
         public ActionResult Index()
         {
             return View(db.Passports.ToList());
+            //ФИРСТ КОММИТ
         }
     }
 }

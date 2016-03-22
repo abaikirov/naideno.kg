@@ -201,6 +201,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Admin\" />
     <Folder Include="Views\Main\" />
     <Folder Include="Views\Universal\" />
     <Folder Include="Views\User\" />

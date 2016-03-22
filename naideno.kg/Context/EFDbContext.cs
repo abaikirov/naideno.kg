@@ -13,5 +13,6 @@ namespace naideno.kg.Context
         public DbSet<Universal> Universals { get; set; }
         public DbSet<User> Users { get; set; }
         //Ktaff
+        //lol
     }
 }

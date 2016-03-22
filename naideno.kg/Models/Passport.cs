@@ -17,7 +17,6 @@ namespace naideno.kg.Models
         public bool Status { get; set; }
         public int UserID { get; set; }
 
-
         public virtual User User { get; set; }
     }
 }

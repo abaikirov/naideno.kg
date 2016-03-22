@@ -2,20 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using naideno.kg.Context;
 using System.Web.Mvc;
 using naideno.kg.Models;
+using naideno.kg.Context;
 
 namespace naideno.kg.Controllers
 {
-    public class PassportController : Controller
+    public class lostfound : Controller
     {
-        private EFDbContext db = new EFDbContext();
-
+        EFDbContext db = new EFDbContext();
+        // GET: lostfound
         public ActionResult Index()
         {
-            return View(db.Passports.ToList());
-            //ФИРСТ КОММИТ
+            return View();
         }
     }
 }

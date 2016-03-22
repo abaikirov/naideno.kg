@@ -140,9 +140,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\PassportController.cs" />
+    <Compile Include="Controllers\lostfound.cs" />
     <Compile Include="Initializer\DBInit.cs" />
-    <Compile Include="Context\EFDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -165,6 +164,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Passport\Index.cshtml" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\LostFound\lostfoundpage.cshtml" />
+    <Content Include="Views\LostFound\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -174,6 +175,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Context\" />
     <Folder Include="Views\Main\" />
     <Folder Include="Views\Universal\" />
     <Folder Include="Views\User\" />

@@ -12,5 +12,6 @@ namespace naideno.kg.Context
         public DbSet<Passport> Passports { get; set; }
         public DbSet<Universal> Universals { get; set; }
         public DbSet<User> Users { get; set; }
+        //Ktaff
     }
 }

@@ -7,10 +7,10 @@ using naideno.kg.Models;
 
 namespace naideno.kg.Context
 {
-	public class EFDbContext
+	public class EFDbContext : DbContext
 	{
-        DbSet<Passport> Passports { get; set; }
-        DbSet<Universal> Universals { get; set; }
-        DbSet<User> Users { get; set; }
+        public DbSet<Passport> Passports { get; set; }
+        public DbSet<Universal> Universals { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

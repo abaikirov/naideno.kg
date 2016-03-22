@@ -160,6 +160,7 @@
     <Compile Include="Controllers\PassportsController.cs" />
     <Compile Include="Controllers\UniversalsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Models\init.cs" />
     <Compile Include="Models\Passport.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

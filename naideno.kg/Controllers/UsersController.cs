@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using naideno.kg.Context;
 using naideno.kg.Models;
+using System.Web.Security;
 
 namespace naideno.kg.Controllers
 {
@@ -114,6 +115,12 @@ namespace naideno.kg.Controllers
             db.Users.Remove(user);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return View();
         }
 
         protected override void Dispose(bool disposing)

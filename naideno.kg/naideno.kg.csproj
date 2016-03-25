@@ -141,10 +141,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <None Include="scripts\jquery.validate-vsdoc.js" />
@@ -157,9 +172,11 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\EFDbContext.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\PassportsController.cs" />
     <Compile Include="Controllers\UniversalsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Models\AdminModel.cs" />
     <Compile Include="Models\init.cs" />
     <Compile Include="Models\Passport.cs" />
     <Compile Include="Global.asax.cs">
@@ -193,6 +210,7 @@
     <Content Include="Views\Universals\Details.cshtml" />
     <Content Include="Views\Universals\Edit.cshtml" />
     <Content Include="Views\Universals\Index.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -202,10 +220,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Admin\" />
     <Folder Include="Views\Main\" />
-    <Folder Include="Views\Universal\" />
-    <Folder Include="Views\User\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

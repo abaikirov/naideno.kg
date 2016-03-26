@@ -15,15 +15,11 @@
     <title></title>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <ul class="nav navbar-nav">
-            <li>@Html.ActionLink("Документы", "Index", "Passports")</li>
-            <li>@Html.ActionLink("Остальное", "Index", "Universals")</li>
-        </ul>
-        
+    <div class="header">
+        <h2>Добро пожаловать в Бюро Находок</h2>
     </div>
     <div>
-        @RenderBody()
+    @RenderBody()
     </div>
 </body>
 </html>

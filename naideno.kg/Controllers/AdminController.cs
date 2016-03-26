@@ -44,6 +44,12 @@ namespace naideno.kg.Controllers
             }
         }
 
+        [Authorize]
+        public ActionResult Index()
+        {
+            return View();
+        }
+
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();

@@ -12,6 +12,7 @@ using System.Web.Security;
 
 namespace naideno.kg.Controllers
 {
+    [Authorize]
     public class UsersController : Controller
     {
         private EFDbContext db = new EFDbContext();

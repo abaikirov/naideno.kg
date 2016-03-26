@@ -11,6 +11,7 @@ using naideno.kg.Models;
 
 namespace naideno.kg.Controllers
 {
+    [Authorize]
     public class UniversalsController : Controller
     {
         private EFDbContext db = new EFDbContext();

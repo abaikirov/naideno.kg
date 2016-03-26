@@ -173,6 +173,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\EFDbContext.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\PassportsController.cs" />
     <Compile Include="Controllers\UniversalsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
@@ -211,6 +212,10 @@
     <Content Include="Views\Universals\Edit.cshtml" />
     <Content Include="Views\Universals\Index.cshtml" />
     <Content Include="Views\Admin\Login.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Shared\_MainPageLayout.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Shared\_AdminLogin.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

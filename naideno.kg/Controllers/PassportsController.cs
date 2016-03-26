@@ -11,6 +11,8 @@ using naideno.kg.Models;
 
 namespace naideno.kg.Controllers
 {
+
+    [Authorize]
     public class PassportsController : Controller
     {
         private EFDbContext db = new EFDbContext();

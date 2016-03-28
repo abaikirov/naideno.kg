@@ -12,7 +12,7 @@ namespace naideno.kg.Models
         public string Description { get; set; }
         public DateTime UploadDate { get; set; }
         public string Category { get; set; }
-        public bool Status { get; set; }
+        public bool Status { get; set; } // true - найдено, false - потеряно
         public int UserID { get; set; }
 
         public virtual User User { get; set; }

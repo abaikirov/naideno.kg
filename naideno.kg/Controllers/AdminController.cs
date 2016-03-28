@@ -8,6 +8,7 @@ using System.Web.Security;
 
 namespace naideno.kg.Controllers
 {
+    //delete this line
     public class AdminController : Controller
     {
         private bool Authenticate (string name, string password)

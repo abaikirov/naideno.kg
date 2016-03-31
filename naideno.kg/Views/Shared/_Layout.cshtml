@@ -12,6 +12,16 @@
     <script src="~/scripts/jquery-1.10.2.js"></script>
     <script src="~/scripts/jquery.validate.js"></script>
     <script src="~/scripts/jquery.validate.unobtrusive.js"></script>
+    <style>
+        adminTable {
+            border-collapse : collapse;
+        }
+
+        td {
+            padding-top : 5em;
+            padding-bottom : 5em;
+        }
+    </style>
     <title></title>
 </head>
 <body>
@@ -19,10 +29,11 @@
         <ul class="nav navbar-nav">
             <li>@Html.ActionLink("Документы", "Index", "Passports")</li>
             <li>@Html.ActionLink("Остальное", "Index", "Universals")</li>
+            <li>@Html.ActionLink("Пользователи", "Index", "Users")</li>
         </ul>
         
     </div>
-    <div>
+    <div class="container">
         @RenderBody()
     </div>
 </body>

@@ -16,7 +16,7 @@ namespace naideno.kg
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            Database.SetInitializer(new init());
+            //Database.SetInitializer(new init());
         }
     }
 }

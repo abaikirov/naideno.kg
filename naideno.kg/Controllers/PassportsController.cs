@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using naideno.kg.Context;
 using naideno.kg.Models;
+using naideno.kg.Core;
 
 namespace naideno.kg.Controllers
 {
@@ -53,12 +54,21 @@ namespace naideno.kg.Controllers
         {
             if (ModelState.IsValid)
             {
-                passport.UploadDate = DateTime.Now;
-                passport.UserID = db.Users.First(u => u.Name == "buronahodok").ID;
 
-                db.Passports.Add(passport);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                Match match = new Match();
+
+                passport.MatchID = passport.Name + passport.SecondName + passport.ThirdName + passport.Category + passport.Birthday.Date.ToString("dd.MM.yyyy");
+
+                int matchID = match.PassMatch(passport);
+                if (matchID != 0) return Redirect("google.com"); // ЕСТЬ СОВПАДЕНИЕ!!!
+                else {
+                    passport.UploadDate = DateTime.Now;
+                    passport.UserID = db.Users.First(u => u.Name == "buronahodok").ID;
+
+                    db.Passports.Add(passport);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
 
             return View(passport);

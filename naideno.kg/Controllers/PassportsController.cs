@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using naideno.kg.Context;
 using naideno.kg.Models;
+using naideno.kg.Core;
 
 namespace naideno.kg.Controllers
 {
@@ -53,6 +54,13 @@ namespace naideno.kg.Controllers
         {
             if (ModelState.IsValid)
             {
+
+                Match match = new Match();
+
+                int matchID = match.PassMatch(passport.Name, passport.SecondName, passport.ThirdName, passport.Birthday, passport.Category);
+                if (matchID == 7) return RedirectToAction("Create");
+                if (matchID == 0) return RedirectToAction("Details");
+
                 passport.UploadDate = DateTime.Now;
                 passport.UserID = db.Users.First(u => u.Name == "buronahodok").ID;
 

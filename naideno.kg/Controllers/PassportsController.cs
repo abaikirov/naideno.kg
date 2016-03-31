@@ -57,16 +57,18 @@ namespace naideno.kg.Controllers
 
                 Match match = new Match();
 
-                int matchID = match.PassMatch(passport.Name, passport.SecondName, passport.ThirdName, passport.Birthday, passport.Category);
-                if (matchID == 7) return RedirectToAction("Create");
-                if (matchID == 0) return RedirectToAction("Details");
+                passport.MatchID = passport.Name + passport.SecondName + passport.ThirdName + passport.Category + passport.Birthday.Date.ToString("dd.MM.yyyy");
 
-                passport.UploadDate = DateTime.Now;
-                passport.UserID = db.Users.First(u => u.Name == "buronahodok").ID;
+                int matchID = match.PassMatch(passport);
+                if (matchID != 0) return Redirect("google.com"); // ЕСТЬ СОВПАДЕНИЕ!!!
+                else {
+                    passport.UploadDate = DateTime.Now;
+                    passport.UserID = db.Users.First(u => u.Name == "buronahodok").ID;
 
-                db.Passports.Add(passport);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                    db.Passports.Add(passport);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
 
             return View(passport);

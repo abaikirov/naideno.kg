@@ -11,14 +11,17 @@ namespace naideno.kg.Core
     {
         private EFDbContext db = new EFDbContext();
 
-        public int PassMatch(string name, string secondName, string thirdName, DateTime Birthday, string category)
+        public int PassMatch(Passport otherPass)
         {
 
-            Passport matchPass = db.Passports.First(p => p.Name == name && p.SecondName == secondName && p.ThirdName == thirdName); // && p.SecondName == secondName   ).ID;
-
-            if (matchPass.Birthday.Date == Birthday.Date && matchPass.Category == category)
+            try {
+                Passport matchPass = db.Passports.Single(p => p.MatchID == otherPass.MatchID);
                 return matchPass.ID;
-            else return 0;
+            }
+            catch(Exception)
+            {
+                return 0;
+            }
         }
     }
 }

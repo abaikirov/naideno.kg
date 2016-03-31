@@ -17,6 +17,9 @@ namespace naideno.kg.Models
         public bool Status { get; set; } // true - найдено, false - потеряно
         public int UserID { get; set; }
 
+        public string MatchID { get; set; }
+
+
         public virtual User User { get; set; }
     }
 }

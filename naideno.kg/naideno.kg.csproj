@@ -214,6 +214,7 @@
     <Compile Include="Controllers\PassportsController.cs" />
     <Compile Include="Controllers\UniversalsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Core\EmailSender.cs" />
     <Compile Include="Core\Match.cs" />
     <Compile Include="Migrations\201603301611017_InitialCreate.cs" />
     <Compile Include="Migrations\201603301611017_InitialCreate.Designer.cs">

@@ -60,7 +60,12 @@ namespace naideno.kg.Controllers
                 passport.MatchID = passport.Name + passport.SecondName + passport.ThirdName + passport.Category + passport.Birthday.Date.ToString("dd.MM.yyyy");
 
                 int matchID = match.PassMatch(passport);
-                if (matchID != 0) return Redirect("google.com"); // ЕСТЬ СОВПАДЕНИЕ!!!
+                if (matchID != 0) // ЕСТЬ СОВПАДЕНИЕ!!!
+                {
+                    EmailSender email = new EmailSender();
+                    email.ProccessOrder(passport, new User { Name = "Нурс", PhoneNumber = "+996777169561", Email = "nurs@kg.com" });
+                    return RedirectToAction("Index");
+                }
                 else {
                     passport.UploadDate = DateTime.Now;
                     passport.UserID = db.Users.First(u => u.Name == "buronahodok").ID;

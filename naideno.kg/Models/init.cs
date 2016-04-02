@@ -11,7 +11,7 @@ namespace naideno.kg.Models
     {
         protected override void Seed(EFDbContext db)
         {
-            db.Users.Add(new User { Name = "buronahodok", Email = "office@naideno.kg", PhoneNumber = "+996555555555" });
+            db.Users.Add(new User { Name = "buronahodok", Email = "abaikirov@gmail.com", PhoneNumber = "+996555555555" });
             db.SaveChanges();
             
 

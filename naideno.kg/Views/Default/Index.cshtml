@@ -14,10 +14,11 @@
         <meta name="viewport" content="width=device-width" />
         <link href="~/Content/bootstrap.css" rel="stylesheet" />
         <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
-        <script src="~/scripts/jquery-1.10.2.js"></script>
+        <script src="~/scripts/jquery-2.2.3.js"></script>
         <script src="~/scripts/jquery.validate.js"></script>
         <script src="~/scripts/jquery.validate.unobtrusive.js"></script>
 		<script src="scripts/jquery.min.js"></script>
+        <script src="~/scripts/jquery.unobtrusive-ajax.js"></script>
 		<script src="scripts/jquery.scrolly.min.js"></script>
 		<script src="scripts/jquery.dropotron.min.js"></script>
 		<script src="scripts/jquery.scrollex.min.js"></script>
@@ -31,6 +32,7 @@
 		</noscript>
 	</head>
 	<body class="landing">
+
 			<header id="header">
 				<h1 id="logo"><a href="index.html">Naideno.kg</a></h1>
 				<nav id="nav">
@@ -44,9 +46,18 @@
 			<section id="banner">
 				<div class="content">
 					<header>
-                            <a href="/addingadvert/Index">НАШЕЛ</a>
-							<input type="button" value=Нашел>
-				            <input type="button" value=Потерял>
+                            <!--<a href="/addingadvert/Index">НАШЕЛ</a>
+							<input type="button" value=Нашел onclick="loca">
+				            <input type="button" value=Потерял>-->
+                          @using (Ajax.BeginForm("adddocument", new AjaxOptions { UpdateTargetId = "form" }))
+                          {
+                              <input type="submit" value="Нашел документ" />
+                          }
+                        @using (Ajax.BeginForm("adduniversal", new AjaxOptions { UpdateTargetId = "form" }))
+                        {
+                            <input type="submit" value="Нашел хуйню" />
+                        }
+                            <div id="form"></div>
 					</header>
 				</div>
 				<a href="#one" class="goto-next scrolly">Next</a>

@@ -16,8 +16,8 @@ namespace naideno.kg.Controllers
         {
             return View();
         }
-       
         [HttpGet]
+     
         public ActionResult adddocument()
         {
             return PartialView();
@@ -27,6 +27,7 @@ namespace naideno.kg.Controllers
             return PartialView();
         }
         [HttpPost]
+       
         public string adduniversal(Universal thing)
         {
             //здесь поиск соответствия

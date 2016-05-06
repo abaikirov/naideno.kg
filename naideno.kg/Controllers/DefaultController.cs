@@ -14,5 +14,13 @@ namespace naideno.kg.Controllers
         {
             return View();
         }
+        public ActionResult adddocument()
+        {
+            return PartialView("_adddocument");
+        }
+        public ActionResult adduniversal()
+        {
+            return PartialView("_adduniversal");
+        }
     }
 }

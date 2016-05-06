@@ -141,6 +141,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Addingadvert.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -191,13 +192,17 @@
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\init.js" />
-    <Content Include="scripts\jquery-1.10.2.js" />
-    <Content Include="scripts\jquery-1.10.2.min.js" />
+    <None Include="scripts\jquery-2.2.3.intellisense.js" />
+    <Content Include="scripts\jquery-2.2.3.js" />
+    <Content Include="scripts\jquery-2.2.3.min.js" />
+    <Content Include="scripts\jquery-2.2.3.min.map" />
     <None Include="scripts\jquery.validate-vsdoc.js" />
     <Content Include="scripts\jquery.dropotron.min.js" />
     <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\jquery.scrollex.min.js" />
     <Content Include="scripts\jquery.scrolly.min.js" />
+    <Content Include="scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="scripts\jquery.validate.js" />
     <Content Include="scripts\jquery.validate.min.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.js" />
@@ -207,6 +212,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Addingadvert.aspx.cs">
+      <DependentUpon>Addingadvert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Addingadvert.aspx.designer.cs">
+      <DependentUpon>Addingadvert.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\EFDbContext.cs" />
     <Compile Include="Controllers\addingadvertController.cs" />
@@ -251,7 +263,6 @@
     </Content>
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Passports\Create.cshtml" />
     <Content Include="Views\Passports\Delete.cshtml" />
     <Content Include="Views\Passports\Details.cshtml" />
@@ -273,9 +284,10 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Shared\_AdminLogin.cshtml" />
     <Content Include="Views\Default\addingadvert.cshtml" />
-    <Content Include="Views\addingadvert\adduniversal.cshtml" />
+    <Content Include="Views\Shared\_adduniversal.cshtml" />
     <Content Include="Views\addingadvert\Index.cshtml" />
-    <Content Include="Views\addingadvert\adddocument.cshtml" />
+    <Content Include="Views\Shared\_adddocument.cshtml" />
+    <Content Include="Views\addingadvert\partial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
